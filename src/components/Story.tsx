@@ -22,8 +22,8 @@ export default function Story() {
             <Image
               src="/profile.png"
               alt="김범수 수의사"
-              width={40}
-              height={40}
+              width={64}
+              height={64}
               className="rounded-full object-cover"
             />
             <span className="text-slate-500 text-sm">
