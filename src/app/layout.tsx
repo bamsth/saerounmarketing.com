@@ -42,6 +42,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://saerounmarketing.com",
   },
+  verification: {
+    other: {
+      "naver-site-verification": "515735dd4ef0c758aa616ea229756201ab6d79ec",
+    },
+  },
 };
 
 const jsonLd = {
