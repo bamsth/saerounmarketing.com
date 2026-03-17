@@ -47,9 +47,8 @@ export default function ThankYouContent() {
           >
             홈으로 돌아가기
           </button>
-          {/* TODO: 카카오톡 채널 ID 확보 후 href 교체 필요 */}
           <a
-            href="#"
+            href="http://pf.kakao.com/_NVttn/chat"
             className="border border-[#FEE500] bg-[#FEE500]/10 hover:bg-[#FEE500]/20 text-[#FEE500] font-bold px-8 py-4 rounded-xl text-base transition-all duration-200"
           >
             카카오톡 문의하기
