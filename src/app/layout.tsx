@@ -43,6 +43,7 @@ export const metadata: Metadata = {
     canonical: "https://saerounmarketing.com",
   },
   verification: {
+    google: "AhZJlzeLQxqXz6POXUVuh4Rqx7HTlvrh3dVnVo5-XKs",
     other: {
       "naver-site-verification": "515735dd4ef0c758aa616ea229756201ab6d79ec",
     },
@@ -119,6 +120,22 @@ export default function RootLayout({
   return (
     <html lang="ko" className={notoSansKR.variable}>
       <head>
+        {/* Google Analytics 4 */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BXZJX18Q1M"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BXZJX18Q1M');
+            `,
+          }}
+        />
+        {/* JSON-LD 구조화 데이터 */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
