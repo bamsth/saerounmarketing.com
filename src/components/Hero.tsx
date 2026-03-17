@@ -7,7 +7,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen bg-[#0a0f1e] flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen bg-[#0a0f1e] flex items-center justify-center overflow-hidden">
       {/* 배경 그라디언트 */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1e] via-[#0d1b3e] to-[#0a0f1e]" />
 
