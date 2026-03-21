@@ -44,7 +44,7 @@ export default function Services() {
         {/* 섹션 헤더 — 좌측 정렬 */}
         <div className="mb-16">
           <p className="text-blue-400 text-sm font-medium tracking-wider mb-4">
-            Services
+            서비스
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-white">
             어떻게 브랜딩할까요?

@@ -104,7 +104,7 @@ export default function Results() {
               <CountUp num={50} prefix="+" suffix="%" />
               <p className="text-slate-500 text-xs">3개월 매출 성장</p>
             </div>
-            <div className="overflow-hidden">
+            <div className="overflow-hidden w-1/2">
               <Image
                 src="/kakao-proof.png"
                 alt="원장님 카카오톡 대화"
