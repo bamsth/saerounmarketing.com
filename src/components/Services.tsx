@@ -56,9 +56,9 @@ export default function Services() {
 
         <Stagger className="grid md:grid-cols-2 gap-4 mb-12">
           {services.map((svc) => (
-            <StaggerItem key={svc.title}>
+            <StaggerItem key={svc.title} className="h-full">
             <div
-              className="rounded-2xl p-7 bg-slate-800/50 hover:-translate-y-1 transition-transform duration-200"
+              className="h-full rounded-2xl p-7 bg-slate-800/50 hover:-translate-y-1 transition-transform duration-200"
             >
               {/* 상단 액센트 라인 — 번호 뱃지 대신 */}
               <div className={`w-8 h-0.5 ${svc.accent} mb-6`} />
