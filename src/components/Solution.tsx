@@ -78,7 +78,7 @@ export default function Solution() {
           </h3>
 
           {/* 컬럼 헤더 */}
-          <div className="grid grid-cols-2 gap-6 md:gap-12 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-12 mb-6">
             <p className="text-slate-400 text-xs font-semibold tracking-wider uppercase">
               일반 에이전시
             </p>
@@ -92,7 +92,7 @@ export default function Solution() {
             {comparison.map((row, i) => (
               <div
                 key={i}
-                className="grid grid-cols-2 gap-6 md:gap-12 py-5 border-t border-slate-100"
+                className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-12 py-5 border-t border-slate-100"
               >
                 {/* 왼쪽: 회색톤 — 일반 에이전시 한계 */}
                 <p className="text-slate-400 text-sm leading-relaxed">
