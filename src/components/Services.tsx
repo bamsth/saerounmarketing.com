@@ -78,7 +78,9 @@ export default function Services() {
         {/* 하단 안내 */}
         <div className="text-center">
           <p className="text-slate-500 text-sm mb-6">
-            상세한 서비스 구성 및 비용은 미팅을 통해 맞춤 안내드립니다
+            월 90만원~부터 시작합니다
+            <br />
+            <span className="text-slate-600 text-xs">상세 구성 및 패키지는 미팅을 통해 맞춤 안내드립니다</span>
           </p>
           <button
             onClick={scrollToContact}

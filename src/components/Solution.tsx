@@ -46,7 +46,7 @@ export default function Solution() {
             The Solution
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900">
-            수의사만이 가능한 마케팅
+            수의학을 모르면, 마케팅도 없습니다
           </h2>
           <p className="text-slate-500 mt-4">
             수의사가 직접 기획하고 운영합니다

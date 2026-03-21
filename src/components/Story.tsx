@@ -34,7 +34,7 @@ export default function Story() {
 
         {/* 제목 */}
         <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-12">
-          왜 수의사가 마케팅을 하나요?
+          수의사가 왜 마케팅을 하냐고요?
         </h2>
 
         {/* 스토리 본문 — 3단 수평 배치, 구분선으로 자연스럽게 */}

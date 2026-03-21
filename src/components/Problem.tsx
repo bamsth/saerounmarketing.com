@@ -26,8 +26,8 @@ export default function Problem() {
             The Problem
           </p>
           <h2 className="text-3xl md:text-4xl font-black text-white">
-            일반 마케팅 에이전시의
-            <span className="text-red-400"> 치명적 한계</span>
+            지금 당신이 쓰는 마케팅 대행사,
+            <span className="text-red-400"> 괜찮은 거 맞나요?</span>
           </h2>
           <p className="text-slate-400 mt-4 max-w-xl">
             좋은 진료를 해도 예약이 안 차는 이유는 바로 여기 있습니다

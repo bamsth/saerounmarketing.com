@@ -2,9 +2,9 @@
 // 성과 수치를 큰 타이포그래피로 강조, 🦷 → 텍스트 레이블로 대체
 const achievements = [
   { value: "+50%", label: "3개월 매출 성장" },
-  { value: "+100%", label: "플레이스 노출 증가" },
-  { value: "증가", label: "소개·입소문 내원" },
-  { value: "증가", label: "블로그 기반 내원" },
+  { value: "+47%", label: "월매출 추가 상승" },
+  { value: "+40%", label: "소개·입소문 내원" },
+  { value: "+60%", label: "블로그 기반 내원" },
 ];
 
 export default function Results() {

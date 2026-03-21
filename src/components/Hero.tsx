@@ -33,11 +33,9 @@ export default function Hero() {
 
         {/* 서브텍스트 */}
         <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10 animate-fade-in-up-delay-1">
-          수의사가 직접 운영하는 마케팅 에이전시는 단어 하나부터 다릅니다.
+          전국에 동물병원 마케팅 대행사는 수백 곳.
           <br className="hidden md:block" />
-          새로운마케팅은 수의학적 본질을 꿰뚫는 통찰로
-          <br className="hidden md:block" />
-          <strong className="text-white">원장님의 가치를 증명합니다.</strong>
+          <strong className="text-white">수의사 면허를 가진 곳은 단 하나입니다.</strong>
         </p>
 
         {/* CTA 버튼 — 스크롤 힌트 완전 제거 */}
