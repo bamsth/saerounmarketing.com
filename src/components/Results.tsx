@@ -6,8 +6,7 @@ import { FadeIn, Stagger, StaggerItem } from "@/components/FadeIn";
 import { motion, useInView } from "framer-motion";
 
 const achievements = [
-  { num: 40, prefix: "+", suffix: "%", label: "소개·입소문 내원" },
-  { num: 60, prefix: "+", suffix: "%", label: "블로그 기반 내원" },
+  { num: 50, prefix: "+", suffix: "%", label: "3개월 매출 성장" },
 ];
 
 function CountUp({ num, prefix, suffix }: { num: number; prefix: string; suffix: string }) {
@@ -101,13 +100,9 @@ export default function Results() {
 
           {/* 오른쪽: 수치 */}
           <FadeIn direction="right" delay={0.15}>
-            <div className="grid grid-cols-2 gap-px bg-slate-800 mb-px">
-              {achievements.map((a) => (
-                <div key={a.label} className="bg-slate-900 p-6 flex flex-col justify-between">
-                  <CountUp num={a.num} prefix={a.prefix} suffix={a.suffix} />
-                  <p className="text-slate-500 text-xs">{a.label}</p>
-                </div>
-              ))}
+            <div className="bg-slate-800 p-6 mb-px">
+              <CountUp num={50} prefix="+" suffix="%" />
+              <p className="text-slate-500 text-xs">3개월 매출 성장</p>
             </div>
             <div className="overflow-hidden">
               <Image
