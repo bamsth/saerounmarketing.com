@@ -1,6 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+
+function CountDown() {
+  const [count, setCount] = useState(300);
+
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      const duration = 1800;
+      const start = 300;
+      const end = 1;
+      const startTime = Date.now();
+
+      const timer = setInterval(() => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 2);
+        const current = Math.round(start + (end - start) * eased);
+        setCount(current);
+        if (progress >= 1) clearInterval(timer);
+      }, 16);
+
+      return () => clearInterval(timer);
+    }, 600);
+
+    return () => clearTimeout(delay);
+  }, []);
+
+  return <span className="font-bold tabular-nums">{count}</span>;
+}
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -46,7 +75,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10"
         >
-          전국에 동물병원 마케팅 대행사는 수백 곳.
+          전국에 동물병원 마케팅 대행사는 <CountDown /> 곳.
           <br className="hidden md:block" />
           <strong className="text-white">수의사 면허를 가진 곳은 단 하나입니다.</strong>
         </motion.p>

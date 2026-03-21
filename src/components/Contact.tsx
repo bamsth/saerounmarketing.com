@@ -83,9 +83,6 @@ export default function Contact() {
       <div className="max-w-2xl mx-auto px-6">
         {/* 헤더 */}
         <div className="text-center mb-12">
-          <span className="text-blue-400 font-semibold text-sm tracking-widest uppercase">
-            Free Consultation
-          </span>
           <h2 className="text-3xl md:text-4xl font-black text-white mt-3">
             아직 결정하지 마세요.
             <br />

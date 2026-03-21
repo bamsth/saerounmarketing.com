@@ -40,9 +40,6 @@ export default function Solution() {
       <div className="max-w-5xl mx-auto px-6">
 
         <FadeIn className="mb-16">
-          <p className="text-blue-500 text-sm font-medium tracking-wider mb-4">
-            The Solution
-          </p>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900">
             수의학을 모르면, 마케팅도 없습니다
           </h2>

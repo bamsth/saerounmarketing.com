@@ -7,9 +7,6 @@ export default function Story() {
       <div className="max-w-5xl mx-auto px-6">
 
         {/* 상단 레이블 */}
-        <p className="text-blue-500 text-sm font-medium tracking-wider mb-12">
-          Our Story
-        </p>
 
         <FadeIn>
         {/* 큰 인용구 — 시각적 앵커 역할 */}

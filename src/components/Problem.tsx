@@ -21,9 +21,6 @@ export default function Problem() {
       <div className="max-w-5xl mx-auto px-6">
 
         <FadeIn className="mb-16">
-          <p className="text-red-400 text-sm font-medium tracking-wider mb-4">
-            The Problem
-          </p>
           <h2 className="text-3xl md:text-4xl font-black text-white">
             지금 당신이 쓰는 마케팅 대행사,
             <span className="text-red-400"> 괜찮은 거 맞나요?</span>

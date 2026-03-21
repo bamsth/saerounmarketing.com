@@ -42,7 +42,6 @@ export default function Results() {
 
         {/* 헤더 */}
         <FadeIn className="mb-16">
-          <p className="text-blue-400 text-sm font-medium tracking-wider mb-4">Real Case</p>
           <h2 className="text-3xl md:text-4xl font-black text-white">
             3개월 후, 원장님이
             <span className="text-blue-400"> 사람을 뽑았습니다</span>

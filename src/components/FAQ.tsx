@@ -33,9 +33,6 @@ export default function FAQ() {
       <div className="max-w-3xl mx-auto px-6">
         {/* 섹션 헤더 */}
         <div className="text-center mb-16">
-          <span className="text-blue-500 font-semibold text-sm tracking-widest uppercase">
-            FAQ
-          </span>
           <h2 className="text-3xl md:text-4xl font-black text-slate-900 mt-3">
             자주 묻는 질문
           </h2>
