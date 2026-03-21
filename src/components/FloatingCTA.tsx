@@ -36,22 +36,12 @@ export default function FloatingCTA() {
             : "translate-y-full opacity-0 pointer-events-none"
         }`}
       >
-        <div className="flex gap-2">
-          <a
-            href="http://pf.kakao.com/_NVttn/chat"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex-1 bg-[#FEE500] hover:bg-yellow-300 text-slate-900 font-bold py-3.5 rounded-xl text-sm transition-all duration-200 text-center"
-          >
-            카카오 채팅
-          </a>
-          <button
-            onClick={handleClick}
-            className="flex-1 bg-blue-500 hover:bg-blue-400 text-white font-bold py-3.5 rounded-xl text-sm transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/30"
-          >
-            무료 진단 신청
-          </button>
-        </div>
+        <button
+          onClick={handleClick}
+          className="w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-4 rounded-xl text-base transition-all duration-200 hover:shadow-lg hover:shadow-blue-500/30"
+        >
+          무료 브랜딩 진단 신청하기
+        </button>
       </div>
 
       {/* 데스크톱: 우측 하단 플로팅 버튼 */}
