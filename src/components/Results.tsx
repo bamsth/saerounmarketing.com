@@ -7,7 +7,6 @@ import { motion, useInView } from "framer-motion";
 
 const achievements = [
   { num: 50, prefix: "+", suffix: "%", label: "3개월 매출 성장" },
-  { num: 50, prefix: "약 ", suffix: "%", label: "월매출 추가 상승" },
   { num: 40, prefix: "+", suffix: "%", label: "소개·입소문 내원" },
   { num: 60, prefix: "+", suffix: "%", label: "블로그 기반 내원" },
 ];
@@ -110,6 +109,15 @@ export default function Results() {
                   <p className="text-slate-500 text-xs">{a.label}</p>
                 </div>
               ))}
+              <div className="bg-slate-900 overflow-hidden">
+                <Image
+                  src="/kakao-proof.png"
+                  alt="원장님 카카오톡 대화"
+                  width={802}
+                  height={558}
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
 
             <motion.div
@@ -130,24 +138,6 @@ export default function Results() {
 
         </div>
 
-        {/* 구분선 */}
-        <div className="w-full h-px bg-slate-800 mb-16" />
-
-        {/* 카카오톡 증거 — 가운데 정렬 */}
-        <FadeIn>
-          <p className="text-slate-500 text-xs font-semibold tracking-wider uppercase mb-4">
-            원장님에게 온 카카오톡
-          </p>
-          <div className="max-w-lg rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
-            <Image
-              src="/kakao-proof.png"
-              alt="실제 클라이언트 원장님 카카오톡 대화"
-              width={802}
-              height={558}
-              className="w-full"
-            />
-          </div>
-        </FadeIn>
 
       </div>
     </section>
