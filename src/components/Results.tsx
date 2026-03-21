@@ -109,8 +109,8 @@ export default function Results() {
                 <Image
                   src="/kakao-proof.png"
                   alt="원장님 카카오톡 대화"
-                  width={802}
-                  height={558}
+                  width={1306}
+                  height={400}
                   className="w-full"
                 />
               </div>
