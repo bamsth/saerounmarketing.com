@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion";
 
 const achievements = [
   { num: 50, prefix: "+", suffix: "%", label: "3개월 매출 성장" },
-  { num: 47, prefix: "+", suffix: "%", label: "월매출 추가 상승" },
+  { num: 50, prefix: "약 ", suffix: "%", label: "월매출 추가 상승" },
   { num: 40, prefix: "+", suffix: "%", label: "소개·입소문 내원" },
   { num: 60, prefix: "+", suffix: "%", label: "블로그 기반 내원" },
 ];
@@ -81,7 +81,7 @@ export default function Results() {
                 { title: "검색 최적화", desc: "상세설명 키워드 전략 수립" },
               ].map((s, i) => (
                 <StaggerItem key={i} className="flex gap-4 items-start">
-                  <span className="text-slate-600 text-xs font-bold mt-0.5 w-4 flex-shrink-0">
+                  <span className="text-slate-600 text-xs font-bold mt-0.5 w-6 flex-shrink-0 whitespace-nowrap">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
@@ -141,13 +141,18 @@ export default function Results() {
             <p className="text-slate-500 text-xs font-semibold tracking-wider uppercase mb-4">
               원장님에게 온 카카오톡
             </p>
-            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/50 relative">
               <Image
                 src="/kakao-proof.png"
                 alt="실제 클라이언트 원장님 카카오톡 대화"
-                width={600}
-                height={800}
+                width={802}
+                height={558}
                 className="w-full"
+              />
+              {/* 프로필 이미지 + 이름 블러 오버레이 */}
+              <div
+                className="absolute backdrop-blur-md bg-black/30 rounded-lg"
+                style={{ top: "8%", left: "4%", width: "42%", height: "18%" }}
               />
             </div>
           </FadeIn>
@@ -176,7 +181,7 @@ export default function Results() {
                 <span className="text-blue-400 text-sm font-bold text-right tabular-nums">약 5,900만원</span>
               </div>
               <div className="px-6 py-5 bg-blue-500">
-                <p className="text-white font-black text-xl">+47% 매출 성장</p>
+                <p className="text-white font-black text-xl">약 50% 매출 성장</p>
                 <p className="text-blue-100 text-sm mt-1">2개월 만에 — 실제 클라이언트 데이터 기준</p>
               </div>
             </div>
