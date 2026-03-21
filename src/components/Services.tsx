@@ -24,6 +24,13 @@ const services = [
     items: ["타겟 키워드 선정", "광고 소재 제작", "성과 분석 및 최적화"],
     accent: "bg-cyan-500",
   },
+  {
+    title: "랜딩페이지 제작",
+    subtitle: "병원 전용 브랜드 사이트",
+    desc: "블로그·플레이스가 관심을 끌었다면, 랜딩페이지가 신뢰를 확정합니다. 원장님의 철학과 전문성을 담은 페이지를 제작합니다.",
+    items: ["브랜드 스토리 설계", "모바일 최적화 디자인", "상담 전환 구조 설계"],
+    accent: "bg-violet-500",
+  },
 ];
 
 export default function Services() {
@@ -48,12 +55,12 @@ export default function Services() {
           </p>
         </div>
 
-        {/* 서비스 카드 — border 제거, 배경색으로만 구분, 번호 뱃지 제거 */}
-        <div className="grid md:grid-cols-3 gap-4 mb-12">
-          {services.map((svc, i) => (
+        {/* 서비스 카드 — 2x2 그리드 */}
+        <div className="grid md:grid-cols-2 gap-4 mb-12">
+          {services.map((svc) => (
             <div
               key={svc.title}
-              className={`rounded-2xl p-7 ${i === 1 ? "bg-slate-800/70" : "bg-slate-800/40"}`}
+              className="rounded-2xl p-7 bg-slate-800/50"
             >
               {/* 상단 액센트 라인 — 번호 뱃지 대신 */}
               <div className={`w-8 h-0.5 ${svc.accent} mb-6`} />
