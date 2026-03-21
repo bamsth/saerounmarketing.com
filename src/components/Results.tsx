@@ -133,69 +133,21 @@ export default function Results() {
         {/* 구분선 */}
         <div className="w-full h-px bg-slate-800 mb-16" />
 
-        {/* 2단: 카카오톡 증거 | 매출 테이블 */}
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-
-          {/* 카카오톡 스크린샷 */}
-          <FadeIn direction="left">
-            <p className="text-slate-500 text-xs font-semibold tracking-wider uppercase mb-4">
-              원장님에게 온 카카오톡
-            </p>
-            <div className="rounded-2xl overflow-hidden shadow-2xl shadow-black/50 relative">
-              <Image
-                src="/kakao-proof.png"
-                alt="실제 클라이언트 원장님 카카오톡 대화"
-                width={802}
-                height={558}
-                className="w-full"
-              />
-              {/* 프로필 이미지 + 이름 블러 오버레이 */}
-              <div
-                className="absolute backdrop-blur-md bg-black/30 rounded-lg"
-                style={{ top: "8%", left: "4%", width: "42%", height: "18%" }}
-              />
-            </div>
-          </FadeIn>
-
-          {/* 매출 테이블 */}
-          <FadeIn direction="right" delay={0.15}>
-            <p className="text-slate-500 text-xs font-semibold tracking-wider uppercase mb-4">
-              실제 매출 변화
-            </p>
-
-            <div className="rounded-2xl overflow-hidden bg-slate-800/50">
-              <div className="grid grid-cols-2 px-6 py-4 border-b border-slate-700/60">
-                <span className="text-slate-500 text-xs font-semibold">월</span>
-                <span className="text-slate-500 text-xs font-semibold text-right">매출액</span>
-              </div>
-              <div className="grid grid-cols-2 px-6 py-5 border-b border-slate-800">
-                <span className="text-slate-400 text-sm">2025년 11월</span>
-                <span className="text-slate-300 text-sm text-right tabular-nums">약 4,000만원</span>
-              </div>
-              <div className="grid grid-cols-2 px-6 py-5 border-b border-slate-800">
-                <span className="text-slate-400 text-sm">2025년 12월</span>
-                <span className="text-slate-300 text-sm text-right tabular-nums">약 4,100만원</span>
-              </div>
-              <div className="grid grid-cols-2 px-6 py-5 bg-blue-500/10">
-                <span className="text-white text-sm font-semibold">2026년 01월</span>
-                <span className="text-blue-400 text-sm font-bold text-right tabular-nums">약 5,900만원</span>
-              </div>
-              <div className="px-6 py-5 bg-blue-500">
-                <p className="text-white font-black text-xl">약 50% 매출 성장</p>
-                <p className="text-blue-100 text-sm mt-1">2개월 만에 — 실제 클라이언트 데이터 기준</p>
-              </div>
-            </div>
-
-            <div className="mt-8 pl-4 border-l-2 border-slate-600">
-              <p className="text-slate-300 text-sm italic leading-relaxed">
-                &ldquo;저번주부터 시술예약이 틈틈이 들어와서 해결하고 있는데
-                자료정리도 못하고있네요...업무시스템을 조정해야 할 것 같습니다.&rdquo;
-              </p>
-              <p className="text-slate-500 text-xs mt-2">— 실제 클라이언트 원장님</p>
-            </div>
-          </FadeIn>
-
-        </div>
+        {/* 카카오톡 증거 — 가운데 정렬 */}
+        <FadeIn>
+          <p className="text-slate-500 text-xs font-semibold tracking-wider uppercase mb-4">
+            원장님에게 온 카카오톡
+          </p>
+          <div className="max-w-lg rounded-2xl overflow-hidden shadow-2xl shadow-black/50">
+            <Image
+              src="/kakao-proof.png"
+              alt="실제 클라이언트 원장님 카카오톡 대화"
+              width={802}
+              height={558}
+              className="w-full"
+            />
+          </div>
+        </FadeIn>
 
       </div>
     </section>
