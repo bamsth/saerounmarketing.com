@@ -5,7 +5,6 @@ import Problem from "@/components/Problem";
 import Solution from "@/components/Solution";
 import Services from "@/components/Services";
 import Results from "@/components/Results";
-import SocialProof from "@/components/SocialProof";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -21,7 +20,6 @@ export default function Home() {
       <Solution />
       <Services />
       <Results />
-      <SocialProof />
       <FAQ />
       <Contact />
       <Footer />
