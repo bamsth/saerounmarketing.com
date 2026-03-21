@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { FadeIn, Stagger, StaggerItem } from "@/components/FadeIn";
 
 export default function Story() {
   return (
@@ -10,6 +11,7 @@ export default function Story() {
           Our Story
         </p>
 
+        <FadeIn>
         {/* 큰 인용구 — 시각적 앵커 역할 */}
         <div className="mb-16">
           <blockquote className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight max-w-3xl">
@@ -32,14 +34,16 @@ export default function Story() {
           </div>
         </div>
 
-        {/* 제목 */}
+        </FadeIn>
+
+        <FadeIn delay={0.1}>
         <h2 className="text-xl md:text-2xl font-black text-slate-900 mb-12">
           수의사가 왜 마케팅을 하냐고요?
         </h2>
+        </FadeIn>
 
-        {/* 스토리 본문 — 3단 수평 배치, 구분선으로 자연스럽게 */}
-        <div className="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-slate-100">
-          <div className="py-8 md:py-0 md:pr-10">
+        <Stagger className="grid md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+          <StaggerItem className="py-8 md:py-0 md:pr-10">
             <h3 className="font-bold text-slate-900 mb-3 text-base">
               가격 경쟁의 한계를 깨달은 순간
             </h3>
@@ -48,8 +52,8 @@ export default function Story() {
               수의사 면허 없는 경쟁자들이 동물약품 유통을 하며 가격으로만
               승부하는 현실에 부딪혔습니다.
             </p>
-          </div>
-          <div className="py-8 md:py-0 md:px-10">
+          </StaggerItem>
+          <StaggerItem className="py-8 md:py-0 md:px-10">
             <h3 className="font-bold text-slate-900 mb-3 text-base">
               전문성만이 살 길이다
             </h3>
@@ -57,8 +61,8 @@ export default function Story() {
               가격으로 경쟁하는 순간, 전문가는 사라집니다. 살아남으려면
               전문성을 키우고, 그것을 제대로 알려야 한다는 것을 깨달았습니다.
             </p>
-          </div>
-          <div className="py-8 md:py-0 md:pl-10">
+          </StaggerItem>
+          <StaggerItem className="py-8 md:py-0 md:pl-10">
             <h3 className="font-bold text-slate-900 mb-3 text-base">
               동물병원 원장님들도 마찬가지
             </h3>
@@ -67,8 +71,8 @@ export default function Story() {
               의미가 없습니다. 그래서 시작했습니다. 원장님의 전문성을
               보호자의 언어로 번역하는 일을.
             </p>
-          </div>
-        </div>
+          </StaggerItem>
+        </Stagger>
 
       </div>
     </section>

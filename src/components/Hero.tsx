@@ -1,6 +1,7 @@
 "use client";
 
-// Hero 섹션 — animate-pulse 뱃지 제거, 스크롤 힌트 제거, 절제된 느낌으로 수정
+import { motion } from "framer-motion";
+
 export default function Hero() {
   const scrollToContact = () => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
@@ -17,29 +18,45 @@ export default function Hero() {
       <div className="absolute top-[60%] left-[55%] w-[280px] h-[280px] bg-blue-500/4 rounded-full blur-3xl" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        {/* 심플한 한 줄 텍스트 레이블 — pill 뱃지 + animate-pulse 대신 */}
-        <p className="text-blue-400/70 text-sm font-medium tracking-wider mb-8">
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-blue-400/70 text-sm font-medium tracking-wider mb-8"
+        >
           수의사가 직접 운영하는 마케팅 에이전시
-        </p>
+        </motion.p>
 
-        {/* 메인 헤드라인 */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-in-up">
+        <motion.h1
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6"
+        >
           좋은 진료 하는데,
           <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
             왜 예약이 안 찰까요?
           </span>
-        </h1>
+        </motion.h1>
 
-        {/* 서브텍스트 */}
-        <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10 animate-fade-in-up-delay-1">
+        <motion.p
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed mb-10"
+        >
           전국에 동물병원 마케팅 대행사는 수백 곳.
           <br className="hidden md:block" />
           <strong className="text-white">수의사 면허를 가진 곳은 단 하나입니다.</strong>
-        </p>
+        </motion.p>
 
-        {/* CTA 버튼 — 스크롤 힌트 완전 제거 */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up-delay-2">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
           <button
             onClick={scrollToContact}
             className="bg-blue-500 hover:bg-blue-400 text-white font-bold px-8 py-4 rounded-full text-base transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30"
@@ -56,7 +73,7 @@ export default function Hero() {
           >
             더 알아보기
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

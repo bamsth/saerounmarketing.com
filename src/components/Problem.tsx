@@ -1,5 +1,5 @@
-// Problem 섹션 — 이모지 아이콘 + 3열 카드그리드 제거
-// 번호 구분선 형태의 가로 목록으로 임팩트 있게 표현
+import { FadeIn, Stagger, StaggerItem } from "@/components/FadeIn";
+
 const problems = [
   {
     title: "수의학을 모릅니다",
@@ -20,8 +20,7 @@ export default function Problem() {
     <section className="py-24 bg-slate-900">
       <div className="max-w-5xl mx-auto px-6">
 
-        {/* 섹션 헤더 — 좌측 정렬 */}
-        <div className="mb-16">
+        <FadeIn className="mb-16">
           <p className="text-red-400 text-sm font-medium tracking-wider mb-4">
             The Problem
           </p>
@@ -32,12 +31,11 @@ export default function Problem() {
           <p className="text-slate-400 mt-4 max-w-xl">
             좋은 진료를 해도 예약이 안 차는 이유는 바로 여기 있습니다
           </p>
-        </div>
+        </FadeIn>
 
-        {/* 문제 목록 — 구분선 + 번호로 임팩트 있게, 카드 완전 제거 */}
-        <div className="space-y-0">
+        <Stagger className="space-y-0">
           {problems.map((item, i) => (
-            <div
+            <StaggerItem
               key={i}
               className="grid md:grid-cols-[80px_1fr_2fr] gap-6 md:gap-10 items-start py-8 border-t border-slate-800 group"
             >
@@ -55,11 +53,10 @@ export default function Problem() {
               <p className="text-slate-400 leading-relaxed text-sm pt-1">
                 {item.desc}
               </p>
-            </div>
+            </StaggerItem>
           ))}
-          {/* 마지막 구분선 */}
           <div className="border-t border-slate-800" />
-        </div>
+        </Stagger>
 
       </div>
     </section>

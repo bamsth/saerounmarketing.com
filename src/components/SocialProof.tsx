@@ -1,12 +1,12 @@
 import Image from "next/image";
+import { FadeIn } from "@/components/FadeIn";
 
 export default function SocialProof() {
   return (
     <section className="py-24 bg-slate-900">
       <div className="max-w-5xl mx-auto px-6">
 
-        {/* 섹션 헤더 */}
-        <div className="mb-16">
+        <FadeIn className="mb-16">
           <p className="text-blue-400 text-sm font-medium tracking-wider mb-4">
             Real Proof
           </p>
@@ -16,13 +16,11 @@ export default function SocialProof() {
           <p className="text-slate-400 mt-4">
             말이 아닌, 실제로 일어난 일입니다
           </p>
-        </div>
+        </FadeIn>
 
-        {/* 2열 그리드 */}
         <div className="grid md:grid-cols-2 gap-12 items-start">
 
-          {/* 왼쪽: 카카오톡 스크린샷 */}
-          <div>
+          <FadeIn direction="left">
             <p className="text-slate-500 text-xs font-semibold tracking-wider uppercase mb-4">
               원장님에게 온 카카오톡
             </p>
@@ -35,10 +33,9 @@ export default function SocialProof() {
                 className="w-full"
               />
             </div>
-          </div>
+          </FadeIn>
 
-          {/* 오른쪽: 매출 데이터 + 인용 */}
-          <div>
+          <FadeIn direction="right" delay={0.15}>
             <p className="text-slate-500 text-xs font-semibold tracking-wider uppercase mb-4">
               실제 매출 변화
             </p>
@@ -86,7 +83,7 @@ export default function SocialProof() {
               </p>
               <p className="text-slate-500 text-xs mt-2">— 실제 클라이언트 원장님</p>
             </div>
-          </div>
+          </FadeIn>
 
         </div>
       </div>

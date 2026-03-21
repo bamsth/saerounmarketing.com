@@ -1,5 +1,4 @@
-// Solution 섹션 — 이모지 카드 제거, ❌/✅ 비교표 제거
-// 좌우 텍스트 비교 (회색 일반 에이전시 vs 파란 새로운마케팅) + 세로 목록 구조로 대체
+import { FadeIn, Stagger, StaggerItem } from "@/components/FadeIn";
 const solutions = [
   {
     title: "수의학적 통찰을 담은 콘텐츠",
@@ -40,8 +39,7 @@ export default function Solution() {
     <section className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6">
 
-        {/* 섹션 헤더 — 좌측 정렬 */}
-        <div className="mb-16">
+        <FadeIn className="mb-16">
           <p className="text-blue-500 text-sm font-medium tracking-wider mb-4">
             The Solution
           </p>
@@ -51,12 +49,11 @@ export default function Solution() {
           <p className="text-slate-500 mt-4">
             수의사가 직접 기획하고 운영합니다
           </p>
-        </div>
+        </FadeIn>
 
-        {/* 솔루션 목록 — 세로형, 배경색으로만 구분, 카드 border 제거 */}
-        <div className="space-y-0 mb-20">
+        <Stagger className="space-y-0 mb-20">
           {solutions.map((item, i) => (
-            <div
+            <StaggerItem
               key={i}
               className="grid md:grid-cols-[1fr_2fr] gap-6 md:gap-16 items-start py-8 border-t border-slate-100"
             >
@@ -66,10 +63,10 @@ export default function Solution() {
               <p className="text-slate-500 leading-relaxed text-sm">
                 {item.desc}
               </p>
-            </div>
+            </StaggerItem>
           ))}
           <div className="border-t border-slate-100" />
-        </div>
+        </Stagger>
 
         {/* 비교 섹션 — ❌/✅ 테이블 대신 좌우 텍스트 컬럼 */}
         <div>

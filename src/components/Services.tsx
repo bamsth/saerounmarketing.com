@@ -1,7 +1,6 @@
 "use client";
 
-// Services 섹션 — "01/02/03" 뱃지 제거, 서비스 타이틀만 크게
-// 카드 border 제거, 배경색으로만 구분 (bg-slate-800/30 vs bg-slate-800/60)
+import { FadeIn, Stagger, StaggerItem } from "@/components/FadeIn";
 const services = [
   {
     title: "전문성 콘텐츠 제작",
@@ -55,12 +54,11 @@ export default function Services() {
           </p>
         </div>
 
-        {/* 서비스 카드 — 2x2 그리드 */}
-        <div className="grid md:grid-cols-2 gap-4 mb-12">
+        <Stagger className="grid md:grid-cols-2 gap-4 mb-12">
           {services.map((svc) => (
+            <StaggerItem key={svc.title}>
             <div
-              key={svc.title}
-              className="rounded-2xl p-7 bg-slate-800/50"
+              className="rounded-2xl p-7 bg-slate-800/50 hover:-translate-y-1 transition-transform duration-200"
             >
               {/* 상단 액센트 라인 — 번호 뱃지 대신 */}
               <div className={`w-8 h-0.5 ${svc.accent} mb-6`} />
@@ -79,10 +77,11 @@ export default function Services() {
                 ))}
               </ul>
             </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
 
-        {/* 하단 안내 */}
+        <FadeIn>
         <div className="text-center">
           <p className="text-slate-500 text-sm mb-6">
             월 100만원~부터 시작합니다
@@ -96,6 +95,7 @@ export default function Services() {
             무료 브랜딩 진단 신청하기
           </button>
         </div>
+        </FadeIn>
 
       </div>
     </section>
