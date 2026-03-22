@@ -3,8 +3,18 @@ import { FadeIn, Stagger, StaggerItem } from "@/components/FadeIn";
 
 export default function Story() {
   return (
-    <section id="story" className="py-24 bg-white">
-      <div className="max-w-5xl mx-auto px-6">
+    <section id="story" className="py-24 bg-white relative overflow-hidden">
+      {/* 점 패턴 배경 */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle, #1e40af 1px, transparent 1px)`,
+          backgroundSize: "28px 28px",
+        }}
+      />
+      {/* 상단 블루 액센트 라인 */}
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-blue-600 via-cyan-400 to-blue-600" />
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
 
         {/* 상단 레이블 */}
 
@@ -72,6 +82,8 @@ export default function Story() {
         </Stagger>
 
       </div>
+      {/* 하단 그라디언트 페이드 */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-slate-50/50" />
     </section>
   );
 }

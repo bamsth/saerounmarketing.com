@@ -41,10 +41,27 @@ export default function Hero() {
       {/* 배경 그라디언트 */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#0a0f1e] via-[#0d1b3e] to-[#0a0f1e]" />
 
-      {/* 배경 블러 서클 — 위치를 비대칭으로 조정해 자연스럽게 */}
-      <div className="absolute top-[15%] left-[8%] w-[520px] h-[520px] bg-blue-600/8 rounded-full blur-3xl" />
-      <div className="absolute bottom-[10%] right-[12%] w-[360px] h-[360px] bg-cyan-400/5 rounded-full blur-3xl" />
-      <div className="absolute top-[60%] left-[55%] w-[280px] h-[280px] bg-blue-500/4 rounded-full blur-3xl" />
+      {/* 그리드 패턴 */}
+      <div
+        className="absolute inset-0 opacity-[0.035]"
+        style={{
+          backgroundImage: `linear-gradient(rgba(99,179,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(99,179,255,1) 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+        }}
+      />
+
+      {/* 배경 블러 서클 */}
+      <div className="absolute top-[15%] left-[8%] w-[520px] h-[520px] bg-blue-600/12 rounded-full blur-3xl" />
+      <div className="absolute bottom-[10%] right-[12%] w-[400px] h-[400px] bg-cyan-400/8 rounded-full blur-3xl" />
+      <div className="absolute top-[55%] left-[50%] w-[300px] h-[300px] bg-blue-500/6 rounded-full blur-3xl" />
+
+      {/* 빛나는 수평선 */}
+      <div className="absolute top-[28%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/25 to-transparent" />
+      <div className="absolute top-[72%] left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-500/15 to-transparent" />
+
+      {/* 코너 장식 */}
+      <div className="absolute top-8 left-8 w-16 h-16 border-l border-t border-blue-500/20" />
+      <div className="absolute bottom-8 right-8 w-16 h-16 border-r border-b border-blue-500/20" />
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <motion.p

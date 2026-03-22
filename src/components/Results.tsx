@@ -99,9 +99,11 @@ export default function Results() {
 
           {/* 오른쪽: 수치 */}
           <FadeIn direction="right" delay={0.15}>
-            <div className="bg-slate-800 p-6 mb-px">
+            <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 p-8 mb-4 overflow-hidden rounded-xl">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl" />
+              <p className="text-xs font-semibold text-blue-400 tracking-wider uppercase mb-3">매출 성장률</p>
               <CountUp num={50} prefix="+" suffix="%" />
-              <p className="text-slate-500 text-xs">3개월 매출 성장</p>
+              <p className="text-slate-500 text-xs mt-1">3개월 만에 달성</p>
             </div>
             <div className="flex justify-center py-2">
               <div className="overflow-hidden w-1/2">
