@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
+import remarkGfm from "remark-gfm";
 import remarkHtml from "remark-html";
 
 const postsDirectory = path.join(process.cwd(), "src/_posts");
@@ -61,6 +62,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   const { data, content } = matter(fileContents);
 
   const processedContent = await remark()
+    .use(remarkGfm)
     .use(remarkHtml as any) // eslint-disable-line @typescript-eslint/no-explicit-any
     .process(content);
 

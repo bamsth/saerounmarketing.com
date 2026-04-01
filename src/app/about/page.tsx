@@ -52,19 +52,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
-      <main className="min-h-screen bg-slate-950 text-white">
-        {/* 헤더 */}
-        <header className="border-b border-slate-800 py-5 px-6">
-          <div className="max-w-5xl mx-auto">
-            <Link
-              href="/"
-              className="text-slate-400 hover:text-white text-sm transition-colors"
-            >
-              ← 홈으로
-            </Link>
-          </div>
-        </header>
-
+      <main className="min-h-screen bg-slate-950 text-white pt-16">
         <div className="max-w-3xl mx-auto px-6 py-20">
           {/* 프로필 */}
           <div className="flex items-center gap-6 mb-16">

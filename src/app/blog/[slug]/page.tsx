@@ -67,22 +67,7 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <main className="min-h-screen bg-slate-950">
-        {/* 헤더 */}
-        <header className="border-b border-slate-800 py-5 px-6">
-          <div className="max-w-3xl mx-auto flex items-center justify-between">
-            <Link href="/" className="font-black text-white text-lg">
-              새로운마케팅
-            </Link>
-            <Link
-              href="/#contact"
-              className="text-sm bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors"
-            >
-              무료 상담
-            </Link>
-          </div>
-        </header>
-
+      <main className="min-h-screen bg-slate-950 pt-16">
         <article className="max-w-3xl mx-auto px-6 py-12">
           {/* 뒤로가기 */}
           <Link
@@ -94,8 +79,6 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* 메타 */}
           <div className="flex items-center gap-2 mb-4">
-            <time className="text-slate-500 text-sm">{post.date}</time>
-            <span className="text-slate-700">·</span>
             <span className="text-slate-500 text-sm">
               {post.readingTime}분 읽기
             </span>

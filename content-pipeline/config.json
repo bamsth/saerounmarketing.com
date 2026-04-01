@@ -1,0 +1,14 @@
+{
+  "notion_database_id": "33346725-d9f3-8121-97a6-e578bffb0cdd",
+  "notion_data_source_id": "33346725-d9f3-8153-9ab6-000b933925b4",
+  "blog_url": "https://blog.naver.com/saerounmarketing",
+  "channels": ["블로그", "쓰레드"],
+  "schedule": {
+    "question_generator": "월/목 오전 9시",
+    "content_generator": "매일 오전 10시"
+  },
+  "evaluation": {
+    "hard_fail_criteria": ["진정성", "구체성"],
+    "max_retries": 2
+  }
+}

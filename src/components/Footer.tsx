@@ -20,6 +20,13 @@ export default function Footer() {
             </p>
             <div className="flex items-center justify-center md:justify-end gap-4 mt-2">
               <Link
+                href="/blog"
+                className="text-slate-500 hover:text-slate-300 text-xs transition-colors"
+              >
+                블로그
+              </Link>
+              <span className="text-slate-700 text-xs">·</span>
+              <Link
                 href="/about"
                 className="text-slate-600 hover:text-slate-400 text-xs transition-colors"
               >
