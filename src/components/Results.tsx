@@ -29,7 +29,7 @@ function CountUp({ num, prefix, suffix }: { num: number; prefix: string; suffix:
   }, [inView, num]);
 
   return (
-    <p ref={ref} className="text-3xl font-black text-white leading-none mb-2">
+    <p ref={ref} className="text-3xl font-black text-slate-900 leading-none mb-2">
       {prefix}{count}{suffix}
     </p>
   );
@@ -37,16 +37,16 @@ function CountUp({ num, prefix, suffix }: { num: number; prefix: string; suffix:
 
 export default function Results() {
   return (
-    <section id="results" className="py-24 bg-slate-900">
+    <section id="results" className="py-24 bg-slate-50">
       <div className="max-w-5xl mx-auto px-6">
 
         {/* 헤더 */}
         <FadeIn className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-white">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900">
             3개월 후, 원장님이
-            <span className="text-blue-400"> 사람을 뽑았습니다</span>
+            <span className="text-blue-600"> 사람을 뽑았습니다</span>
           </h2>
-          <p className="text-slate-400 mt-4 max-w-xl">
+          <p className="text-slate-600 mt-4 max-w-xl">
             좋은 진료를 하고 있었습니다. 단, 아무도 몰랐을 뿐입니다.
           </p>
         </FadeIn>
@@ -57,19 +57,19 @@ export default function Results() {
           {/* 왼쪽: 케이스 */}
           <FadeIn direction="left">
             <div className="mb-6">
-              <p className="text-xs font-semibold text-blue-400 tracking-wider uppercase mb-1">
+              <p className="text-xs font-semibold text-blue-600 tracking-wider uppercase mb-1">
                 치과 특화 동물병원
               </p>
-              <p className="font-black text-white text-xl">A 동물치과병원</p>
-              <p className="text-slate-400 text-sm mt-2 leading-relaxed">
+              <p className="font-black text-slate-900 text-xl">A 동물치과병원</p>
+              <p className="text-slate-600 text-sm mt-2 leading-relaxed">
                 이미 압도적인 전문성을 갖춘 치과 특화 병원이었지만,
                 보호자들에게 그 &lsquo;가치&rsquo;가 전달되지 않고 있었습니다.
               </p>
             </div>
 
-            <div className="w-full h-px bg-slate-800 mb-6" />
+            <div className="w-full h-px bg-slate-200 mb-6" />
 
-            <p className="font-bold text-white text-sm mb-4">적용 전략</p>
+            <p className="font-bold text-slate-900 text-sm mb-4">적용 전략</p>
             <Stagger className="space-y-4 mb-8">
               {[
                 { title: "초전문성 콘텐츠", desc: "치과 질환별 심화 블로그 콘텐츠 발행" },
@@ -77,11 +77,11 @@ export default function Results() {
                 { title: "검색 최적화", desc: "상세설명 키워드 전략 수립" },
               ].map((s, i) => (
                 <StaggerItem key={i} className="flex gap-4 items-start">
-                  <span className="text-slate-600 text-xs font-bold mt-0.5 w-6 flex-shrink-0 whitespace-nowrap">
+                  <span className="text-slate-300 text-xs font-bold mt-0.5 w-6 flex-shrink-0 whitespace-nowrap">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
-                    <p className="font-semibold text-slate-200 text-sm">{s.title}</p>
+                    <p className="font-semibold text-slate-800 text-sm">{s.title}</p>
                     <p className="text-slate-500 text-sm">{s.desc}</p>
                   </div>
                 </StaggerItem>
@@ -89,7 +89,7 @@ export default function Results() {
             </Stagger>
 
             <div className="pl-4 border-l-2 border-blue-500">
-              <p className="text-slate-300 text-sm italic leading-relaxed">
+              <p className="text-slate-600 text-sm italic leading-relaxed">
                 &ldquo;요즘 보호자분들이 치료에 대해 이미 다 알고 오세요.
                 설명 시간이 줄었고, 소개로 오시는 분들도 눈에 띄게 늘었어요.&rdquo;
               </p>
@@ -99,11 +99,11 @@ export default function Results() {
 
           {/* 오른쪽: 수치 */}
           <FadeIn direction="right" delay={0.15}>
-            <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/50 p-8 mb-4 overflow-hidden rounded-xl">
-              <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 rounded-full blur-2xl" />
-              <p className="text-xs font-semibold text-blue-400 tracking-wider uppercase mb-3">매출 성장률</p>
+            <div className="relative bg-white border border-slate-200 shadow-md p-8 mb-4 overflow-hidden rounded-xl">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-blue-50 rounded-full blur-2xl" />
+              <p className="text-xs font-semibold text-blue-600 tracking-wider uppercase mb-3">매출 성장률</p>
               <CountUp num={50} prefix="+" suffix="%" />
-              <p className="text-slate-500 text-xs mt-1">3개월 만에 달성</p>
+              <p className="text-slate-400 text-xs mt-1">3개월 만에 달성</p>
             </div>
             <div className="flex justify-center py-2">
               <div className="overflow-hidden w-1/2">

@@ -67,12 +67,12 @@ export default async function BlogPostPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <main className="min-h-screen bg-slate-950 pt-16">
+      <main className="min-h-screen bg-white pt-16">
         <article className="max-w-3xl mx-auto px-6 py-12">
           {/* 뒤로가기 */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-1 text-slate-400 hover:text-white text-sm mb-8 transition-colors"
+            className="inline-flex items-center gap-1 text-slate-500 hover:text-slate-900 text-sm mb-8 transition-colors"
           >
             ← 블로그 목록
           </Link>
@@ -85,12 +85,12 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* 제목 */}
-          <h1 className="text-2xl md:text-3xl font-black text-white leading-tight mb-6">
+          <h1 className="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-6">
             {post.title}
           </h1>
 
           {/* 저자 박스 */}
-          <div className="flex items-center gap-4 p-4 bg-slate-900 border border-slate-800 rounded-xl mb-10">
+          <div className="flex items-center gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl mb-10">
             <Image
               src="/profile.png"
               alt="김범수 수의사"
@@ -99,10 +99,10 @@ export default async function BlogPostPage({ params }: Props) {
               className="rounded-full object-cover flex-shrink-0"
             />
             <div>
-              <p className="text-white font-semibold text-sm">
+              <p className="text-slate-900 font-semibold text-sm">
                 김범수 수의사
               </p>
-              <p className="text-slate-400 text-xs">
+              <p className="text-slate-500 text-xs">
                 새로운마케팅 대표 · 수의사 면허 보유 · 동물병원 전문 마케팅
               </p>
             </div>
@@ -115,11 +115,11 @@ export default async function BlogPostPage({ params }: Props) {
           />
 
           {/* CTA */}
-          <div className="mt-12 p-6 bg-blue-600/10 border border-blue-500/30 rounded-2xl text-center">
-            <p className="text-white font-bold mb-2">
+          <div className="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-2xl text-center">
+            <p className="text-slate-900 font-bold mb-2">
               우리 병원에 맞는 마케팅 전략이 궁금하신가요?
             </p>
-            <p className="text-slate-400 text-sm mb-4">
+            <p className="text-slate-600 text-sm mb-4">
               수의사가 직접 병원 현황을 분석하고 전략을 제안합니다.
             </p>
             <Link
@@ -131,7 +131,7 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
 
           {/* 저자 박스 하단 */}
-          <div className="mt-10 pt-8 border-t border-slate-800 flex items-start gap-4">
+          <div className="mt-10 pt-8 border-t border-slate-200 flex items-start gap-4">
             <Image
               src="/profile.png"
               alt="김범수 수의사"
@@ -140,9 +140,9 @@ export default async function BlogPostPage({ params }: Props) {
               className="rounded-full object-cover flex-shrink-0"
             />
             <div>
-              <p className="text-white font-bold">김범수</p>
-              <p className="text-blue-400 text-sm">수의사 · 새로운마케팅 대표</p>
-              <p className="text-slate-400 text-sm mt-2 leading-relaxed">
+              <p className="text-slate-900 font-bold">김범수</p>
+              <p className="text-blue-600 text-sm">수의사 · 새로운마케팅 대표</p>
+              <p className="text-slate-600 text-sm mt-2 leading-relaxed">
                 수의사 면허를 보유한 대한민국 유일의 동물병원 전문 마케팅
                 에이전시 대표. 수의학적 전문성을 보호자의 언어로 번역하는
                 마케팅을 연구합니다.

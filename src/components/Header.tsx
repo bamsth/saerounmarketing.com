@@ -16,14 +16,14 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/60"
+          ? "bg-white/90 backdrop-blur-md border-b border-slate-200/80 shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-black text-white text-lg tracking-tight hover:text-blue-400 transition-colors"
+          className="font-black text-slate-900 text-lg tracking-tight hover:text-blue-600 transition-colors"
         >
           새로운마케팅
         </Link>
@@ -31,13 +31,13 @@ export default function Header() {
         <nav className="flex items-center gap-6">
           <Link
             href="/blog"
-            className="text-slate-400 hover:text-white text-sm font-medium transition-colors"
+            className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors"
           >
             블로그
           </Link>
           <Link
             href="/about"
-            className="text-slate-400 hover:text-white text-sm font-medium transition-colors"
+            className="text-slate-500 hover:text-slate-900 text-sm font-medium transition-colors"
           >
             대표 소개
           </Link>

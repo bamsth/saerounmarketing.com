@@ -38,15 +38,15 @@ export default function Services() {
   };
 
   return (
-    <section id="services" className="py-24 bg-slate-900">
+    <section id="services" className="py-24 bg-white">
       <div className="max-w-5xl mx-auto px-6">
 
         {/* 섹션 헤더 — 좌측 정렬 */}
         <div className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-white">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900">
             어떻게 브랜딩할까요?
           </h2>
-          <p className="text-slate-400 mt-4 max-w-xl">
+          <p className="text-slate-600 mt-4 max-w-xl">
             단순 노출이 아닌, 원장님의 전문성을 보호자가 체감하게 만드는 전략적 마케팅
           </p>
         </div>
@@ -55,19 +55,19 @@ export default function Services() {
           {services.map((svc) => (
             <StaggerItem key={svc.title} className="h-full">
             <div
-              className="h-full rounded-2xl p-7 bg-slate-800/50 hover:-translate-y-1 transition-transform duration-200"
+              className="h-full rounded-2xl p-7 bg-white border border-slate-200 shadow-sm hover:-translate-y-1 transition-transform duration-200"
             >
               {/* 상단 액센트 라인 — 번호 뱃지 대신 */}
               <div className={`w-8 h-0.5 ${svc.accent} mb-6`} />
 
               {/* 서비스 타이틀 크게 */}
-              <h3 className="font-black text-white text-xl mb-1">{svc.title}</h3>
+              <h3 className="font-black text-slate-900 text-xl mb-1">{svc.title}</h3>
               <p className="text-slate-500 text-sm mb-4">{svc.subtitle}</p>
-              <p className="text-slate-300 text-sm leading-relaxed mb-6">{svc.desc}</p>
+              <p className="text-slate-600 text-sm leading-relaxed mb-6">{svc.desc}</p>
 
               <ul className="space-y-2.5">
                 {svc.items.map((item) => (
-                  <li key={item} className="flex items-center gap-2.5 text-slate-400 text-sm">
+                  <li key={item} className="flex items-center gap-2.5 text-slate-500 text-sm">
                     <span className={`w-1 h-1 rounded-full flex-shrink-0 ${svc.accent}`} />
                     {item}
                   </li>
@@ -83,7 +83,7 @@ export default function Services() {
           <p className="text-slate-500 text-sm mb-6">
             월 100만원~부터 시작합니다
             <br />
-            <span className="text-slate-600 text-xs">상세 구성 및 패키지는 미팅을 통해 맞춤 안내드립니다</span>
+            <span className="text-slate-400 text-xs">상세 구성 및 패키지는 미팅을 통해 맞춤 안내드립니다</span>
           </p>
           <button
             onClick={scrollToContact}

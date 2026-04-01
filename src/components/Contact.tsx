@@ -79,37 +79,37 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0a0f1e]">
+    <section id="contact" className="py-24 bg-white">
       <div className="max-w-2xl mx-auto px-6">
         {/* 헤더 */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-black text-white mt-3">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mt-3">
             아직 결정하지 마세요.
             <br />
-            <span className="text-blue-400">우선 진단부터 받아보세요.</span>
+            <span className="text-blue-600">우선 진단부터 받아보세요.</span>
           </h2>
-          <p className="text-slate-400 mt-4">
+          <p className="text-slate-600 mt-4">
             병원 브랜딩 현황 무료 진단 후 1:1 미팅을 진행합니다
           </p>
         </div>
 
         {/* 폼 */}
-        <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
+        <div className="bg-white border border-slate-200 shadow-md rounded-2xl p-8">
           {/* 스텝 인디케이터 */}
           <div className="flex items-center justify-center mb-8">
             <div className="flex items-center">
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
                   step >= 1
-                    ? "bg-blue-500 text-white"
-                    : "bg-slate-700 text-slate-400"
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-100 text-slate-400"
                 }`}
               >
                 1
               </div>
               <span
                 className={`ml-2 text-sm font-medium ${
-                  step >= 1 ? "text-white" : "text-slate-500"
+                  step >= 1 ? "text-slate-900" : "text-slate-400"
                 }`}
               >
                 기본 정보
@@ -118,7 +118,7 @@ export default function Contact() {
 
             <div
               className={`w-12 h-0.5 mx-3 transition-colors ${
-                step >= 2 ? "bg-blue-500" : "bg-slate-700"
+                step >= 2 ? "bg-blue-600" : "bg-slate-200"
               }`}
             />
 
@@ -126,15 +126,15 @@ export default function Contact() {
               <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-colors ${
                   step >= 2
-                    ? "bg-blue-500 text-white"
-                    : "bg-slate-700 text-slate-400"
+                    ? "bg-blue-600 text-white"
+                    : "bg-slate-100 text-slate-400"
                 }`}
               >
                 2
               </div>
               <span
                 className={`ml-2 text-sm font-medium ${
-                  step >= 2 ? "text-white" : "text-slate-500"
+                  step >= 2 ? "text-slate-900" : "text-slate-400"
                 }`}
               >
                 연락처
@@ -147,10 +147,10 @@ export default function Contact() {
             <div className="space-y-4">
               <div>
                 <label
-                  className="block text-slate-400 text-sm mb-1.5"
+                  className="block text-slate-600 text-sm mb-1.5"
                   htmlFor="name"
                 >
-                  원장님 성함 <span className="text-red-400">*</span>
+                  원장님 성함 <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="name"
@@ -160,15 +160,15 @@ export default function Contact() {
                   value={form.name}
                   onChange={handleChange}
                   placeholder="홍길동"
-                  className="w-full bg-slate-900/50 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors text-sm"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors text-sm"
                 />
               </div>
               <div>
                 <label
-                  className="block text-slate-400 text-sm mb-1.5"
+                  className="block text-slate-600 text-sm mb-1.5"
                   htmlFor="hospital"
                 >
-                  병원명 <span className="text-red-400">*</span>
+                  병원명 <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="hospital"
@@ -178,14 +178,14 @@ export default function Contact() {
                   value={form.hospital}
                   onChange={handleChange}
                   placeholder="OO동물병원"
-                  className="w-full bg-slate-900/50 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors text-sm"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors text-sm"
                 />
               </div>
               <button
                 type="button"
                 onClick={handleNext}
                 disabled={!form.name.trim() || !form.hospital.trim()}
-                className="w-full bg-blue-500 hover:bg-blue-400 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-base transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30"
+                className="w-full bg-blue-600 hover:bg-blue-500 disabled:bg-blue-200 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-base transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30"
               >
                 다음
               </button>
@@ -197,10 +197,10 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label
-                  className="block text-slate-400 text-sm mb-1.5"
+                  className="block text-slate-600 text-sm mb-1.5"
                   htmlFor="phone"
                 >
-                  연락처 <span className="text-red-400">*</span>
+                  연락처 <span className="text-red-500">*</span>
                 </label>
                 <input
                   id="phone"
@@ -210,20 +210,20 @@ export default function Contact() {
                   value={form.phone}
                   onChange={handleChange}
                   placeholder="010-0000-0000"
-                  className={`w-full bg-slate-900/50 border rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none transition-colors text-sm ${
+                  className={`w-full bg-slate-50 border rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none transition-colors text-sm ${
                     phoneError
                       ? "border-red-400 focus:border-red-400"
-                      : "border-slate-600 focus:border-blue-500"
+                      : "border-slate-200 focus:border-blue-500"
                   }`}
                 />
                 {phoneError && (
-                  <p className="text-red-400 text-xs mt-1">{phoneError}</p>
+                  <p className="text-red-500 text-xs mt-1">{phoneError}</p>
                 )}
               </div>
 
               <div>
                 <label
-                  className="block text-slate-400 text-sm mb-1.5"
+                  className="block text-slate-600 text-sm mb-1.5"
                   htmlFor="concern"
                 >
                   현재 가장 큰 매출 고민
@@ -235,12 +235,12 @@ export default function Contact() {
                   value={form.concern}
                   onChange={handleChange}
                   placeholder="예: 블로그를 운영하고 있는데 예약으로 연결이 안 됩니다..."
-                  className="w-full bg-slate-900/50 border border-slate-600 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors text-sm resize-none"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors text-sm resize-none"
                 />
               </div>
 
               {status === "error" && (
-                <p className="text-red-400 text-sm text-center">
+                <p className="text-red-500 text-sm text-center">
                   오류가 발생했습니다. 다시 시도해주세요.
                 </p>
               )}
@@ -249,14 +249,14 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={handlePrev}
-                  className="flex-1 border border-slate-600 hover:border-slate-400 text-slate-300 hover:text-white font-bold py-4 rounded-xl text-base transition-all duration-200"
+                  className="flex-1 border border-slate-200 hover:border-slate-400 text-slate-600 hover:text-slate-900 font-bold py-4 rounded-xl text-base transition-all duration-200"
                 >
                   이전
                 </button>
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="flex-[2] bg-blue-500 hover:bg-blue-400 disabled:bg-blue-800 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-base transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30"
+                  className="flex-[2] bg-blue-600 hover:bg-blue-500 disabled:bg-blue-200 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl text-base transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-blue-500/30"
                 >
                   {status === "loading" ? "신청 중..." : "무료 브랜딩 진단 신청하기"}
                 </button>

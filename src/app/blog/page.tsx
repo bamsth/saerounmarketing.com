@@ -20,15 +20,15 @@ export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
-    <main className="min-h-screen bg-slate-950 pt-16">
+    <main className="min-h-screen bg-white pt-16">
       <div className="max-w-5xl mx-auto px-6 py-16">
         {/* 섹션 헤더 */}
         <div className="mb-12">
-          <p className="text-blue-400 text-sm font-semibold mb-2">BLOG</p>
-          <h1 className="text-3xl md:text-4xl font-black text-white">
+          <p className="text-blue-600 text-sm font-semibold mb-2">BLOG</p>
+          <h1 className="text-3xl md:text-4xl font-black text-slate-900">
             동물병원 마케팅 인사이트
           </h1>
-          <p className="text-slate-400 mt-3">
+          <p className="text-slate-600 mt-3">
             수의사가 직접 쓰는 실전 마케팅 가이드
           </p>
         </div>
@@ -39,24 +39,24 @@ export default function BlogPage() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="group block bg-slate-900 border border-slate-800 hover:border-blue-500/50 rounded-2xl p-6 transition-all duration-200 hover:-translate-y-1"
+              className="group block bg-white border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-md rounded-2xl p-6 transition-all duration-200 hover:-translate-y-1"
             >
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-slate-500 text-xs">
+                <span className="text-slate-400 text-xs">
                   {post.readingTime}분 읽기
                 </span>
               </div>
-              <h2 className="text-white font-bold text-base leading-snug mb-3 group-hover:text-blue-400 transition-colors line-clamp-2">
+              <h2 className="text-slate-900 font-bold text-base leading-snug mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
                 {post.title}
               </h2>
-              <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
+              <p className="text-slate-600 text-sm leading-relaxed line-clamp-3">
                 {post.description}
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {post.keywords.slice(0, 2).map((kw) => (
                   <span
                     key={kw}
-                    className="text-xs text-blue-400/70 bg-blue-500/10 px-2 py-0.5 rounded-full"
+                    className="text-xs text-blue-600/80 bg-blue-50 px-2 py-0.5 rounded-full"
                   >
                     {kw}
                   </span>
@@ -67,8 +67,8 @@ export default function BlogPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center border-t border-slate-800 pt-12">
-          <p className="text-slate-400 mb-4">
+        <div className="mt-16 text-center border-t border-slate-200 pt-12">
+          <p className="text-slate-600 mb-4">
             우리 병원에 맞는 마케팅 전략이 궁금하신가요?
           </p>
           <Link

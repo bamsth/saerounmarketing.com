@@ -17,15 +17,15 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="py-24 bg-slate-900">
+    <section className="py-24 bg-slate-50">
       <div className="max-w-5xl mx-auto px-6">
 
         <FadeIn className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-white">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900">
             지금 당신이 쓰는 마케팅 대행사,
-            <span className="text-red-400"> 괜찮은 거 맞나요?</span>
+            <span className="text-red-500"> 괜찮은 거 맞나요?</span>
           </h2>
-          <p className="text-slate-400 mt-4 max-w-xl">
+          <p className="text-slate-600 mt-4 max-w-xl">
             좋은 진료를 해도 예약이 안 차는 이유는 바로 여기 있습니다
           </p>
         </FadeIn>
@@ -34,25 +34,25 @@ export default function Problem() {
           {problems.map((item, i) => (
             <StaggerItem
               key={i}
-              className="grid md:grid-cols-[80px_1fr_2fr] gap-6 md:gap-10 items-start py-8 border-t border-slate-800 group"
+              className="grid md:grid-cols-[80px_1fr_2fr] gap-6 md:gap-10 items-start py-8 border-t border-slate-200 group"
             >
               {/* 번호 — 크게 */}
-              <span className="text-5xl font-black text-slate-700 group-hover:text-red-400/40 transition-colors duration-300 leading-none">
+              <span className="text-5xl font-black text-slate-200 group-hover:text-red-300 transition-colors duration-300 leading-none">
                 {String(i + 1).padStart(2, "0")}
               </span>
 
               {/* 타이틀 */}
-              <h3 className="font-bold text-white text-lg leading-snug pt-1">
+              <h3 className="font-bold text-slate-900 text-lg leading-snug pt-1">
                 {item.title}
               </h3>
 
               {/* 설명 */}
-              <p className="text-slate-400 leading-relaxed text-sm pt-1">
+              <p className="text-slate-600 leading-relaxed text-sm pt-1">
                 {item.desc}
               </p>
             </StaggerItem>
           ))}
-          <div className="border-t border-slate-800" />
+          <div className="border-t border-slate-200" />
         </Stagger>
 
       </div>
