@@ -130,7 +130,3 @@ slug: "advertising-cost"
 ---
 
 병원 상황에 맞는 마케팅 예산 설계가 필요하시면 무료로 상담해드립니다. 수의사가 직접 현황을 진단하고 최적의 예산 배분을 제안합니다.
-
-[무료 상담 신청하기 →](/#contact)
-
-→ [동물병원 마케팅 전체 전략 보기](/blog/donmul-byeongwon-marketing-guide)

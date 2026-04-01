@@ -125,7 +125,3 @@ slug: "gaewon-marketing"
 ---
 
 개원 마케팅 전략을 함께 짜드립니다. 개원 전이시든 개원 직후이시든 지금 바로 무료 상담 신청해주세요.
-
-[무료 상담 신청하기 →](/#contact)
-
-→ [동물병원 마케팅 전체 전략 보기](/blog/donmul-byeongwon-marketing-guide)

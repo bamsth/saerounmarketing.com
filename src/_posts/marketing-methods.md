@@ -105,7 +105,3 @@ slug: "marketing-methods"
 ---
 
 마케팅 전략에 대해 더 자세히 상담 받고 싶으시다면 아래로 연락 주세요.
-
-[무료 상담 신청하기 →](/#contact)
-
-→ [동물병원 마케팅 전체 전략 보기](/blog/donmul-byeongwon-marketing-guide)

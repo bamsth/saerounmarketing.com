@@ -100,7 +100,3 @@ slug: "blog-marketing"
 ---
 
 블로그 운영이 막막하거나 체계적인 전략이 필요하시다면 저희가 도와드릴 수 있습니다.
-
-[무료 상담 신청하기 →](/#contact)
-
-→ [동물병원 마케팅 전체 전략 보기](/blog/donmul-byeongwon-marketing-guide)
