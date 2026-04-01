@@ -1,15 +1,37 @@
 import { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/posts";
 
 const BASE_URL = "https://saerounmarketing.com";
-const LAST_MODIFIED = new Date("2026-03-26");
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const posts = getAllPosts();
+
+  const blogEntries: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.date),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   return [
     {
       url: BASE_URL,
-      lastModified: LAST_MODIFIED,
+      lastModified: new Date("2026-04-01"),
       changeFrequency: "weekly",
       priority: 1,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date("2026-04-01"),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: new Date("2026-04-01"),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    ...blogEntries,
   ];
 }
