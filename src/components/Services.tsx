@@ -80,11 +80,6 @@ export default function Services() {
 
         <FadeIn>
         <div className="text-center">
-          <p className="text-slate-500 text-sm mb-6">
-            월 100만원~부터 시작합니다
-            <br />
-            <span className="text-slate-400 text-xs">상세 구성 및 패키지는 미팅을 통해 맞춤 안내드립니다</span>
-          </p>
           <button
             onClick={scrollToContact}
             className="bg-blue-500 hover:bg-blue-400 text-white font-bold px-8 py-4 rounded-full text-base transition-all duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/30"
