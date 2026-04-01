@@ -77,13 +77,6 @@ export default async function BlogPostPage({ params }: Props) {
             ← 블로그 목록
           </Link>
 
-          {/* 메타 */}
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-slate-500 text-sm">
-              {post.readingTime}분 읽기
-            </span>
-          </div>
-
           {/* 제목 */}
           <h1 className="text-2xl md:text-3xl font-black text-slate-900 leading-tight mb-6">
             {post.title}
@@ -113,22 +106,6 @@ export default async function BlogPostPage({ params }: Props) {
             className="blog-content"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
-
-          {/* CTA */}
-          <div className="mt-12 p-6 bg-blue-50 border border-blue-200 rounded-2xl text-center">
-            <p className="text-slate-900 font-bold mb-2">
-              우리 병원에 맞는 마케팅 전략이 궁금하신가요?
-            </p>
-            <p className="text-slate-600 text-sm mb-4">
-              수의사가 직접 병원 현황을 분석하고 전략을 제안합니다.
-            </p>
-            <Link
-              href="/#contact"
-              className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-            >
-              무료 상담 신청하기
-            </Link>
-          </div>
 
           {/* 저자 박스 하단 */}
           <div className="mt-10 pt-8 border-t border-slate-200 flex items-start gap-4">

@@ -41,11 +41,6 @@ export default function BlogPage() {
               href={`/blog/${post.slug}`}
               className="group block bg-white border border-slate-200 shadow-sm hover:border-blue-400 hover:shadow-md rounded-2xl p-6 transition-all duration-200 hover:-translate-y-1"
             >
-              <div className="flex items-center gap-2 mb-3">
-                <span className="text-slate-400 text-xs">
-                  {post.readingTime}분 읽기
-                </span>
-              </div>
               <h2 className="text-slate-900 font-bold text-base leading-snug mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
                 {post.title}
               </h2>
@@ -66,18 +61,6 @@ export default function BlogPage() {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 text-center border-t border-slate-200 pt-12">
-          <p className="text-slate-600 mb-4">
-            우리 병원에 맞는 마케팅 전략이 궁금하신가요?
-          </p>
-          <Link
-            href="/#contact"
-            className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold px-8 py-4 rounded-xl transition-colors"
-          >
-            무료 상담 신청하기
-          </Link>
-        </div>
       </div>
     </main>
   );
