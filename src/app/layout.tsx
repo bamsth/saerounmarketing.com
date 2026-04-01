@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Script from "next/script";
+import Header from "@/components/Header";
 import "./globals.css";
 
 const pretendard = localFont({
@@ -159,6 +160,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-[var(--font-pretendard)] antialiased">
+        <Header />
         {children}
         {/* Google Analytics 4 — afterInteractive로 렌더링 차단 방지 */}
         <Script
