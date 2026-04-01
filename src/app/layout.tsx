@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import Script from "next/script";
 import "./globals.css";
 
 const pretendard = localFont({
@@ -64,7 +65,22 @@ const jsonLd = {
         "@type": "Person",
         name: "김범수",
         jobTitle: "수의사, 마케팅 컨설턴트",
-        knowsAbout: ["수의학", "동물병원 마케팅", "콘텐츠 마케팅", "브랜딩"],
+        url: "https://saerounmarketing.com/about",
+        hasCredential: {
+          "@type": "EducationalOccupationalCredential",
+          credentialCategory: "수의사 면허",
+          recognizedBy: {
+            "@type": "Organization",
+            name: "농림축산식품부",
+          },
+        },
+        knowsAbout: [
+          "수의학",
+          "동물병원 경영",
+          "디지털 마케팅",
+          "네이버 SEO",
+          "콘텐츠 마케팅",
+        ],
       },
       areaServed: {
         "@type": "Country",
@@ -88,7 +104,23 @@ const jsonLd = {
           name: "어떤 병원에 적합한가요?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "1인/1차 동물병원, 치과·안과·정형외과 등 특수 진료 병원, 2차 동물병원, 신규 개원 및 리브랜딩을 원하는 모든 동물병원에 적합합니다.",
+            text: "브랜딩이 필요한 모든 동물병원에 적합합니다. 1인/1차 동물병원, 치과·안과·정형외과 등 특수 진료 병원, 2차 동물병원, 신규 개원 및 리브랜딩을 원하는 모든 동물병원에 적합합니다. 특히 현재 마케팅이 없거나, 기존 마케팅 효과에 만족하지 못하시는 경우 더욱 효과적입니다.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "비용은 어떻게 되나요?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "월 100만원부터 시작합니다. 콘텐츠 제작 단독: 월 100만원~, 콘텐츠 + 플레이스 관리: 월 140만원~, 콘텐츠 + 플레이스 + 광고 운영: 월 190만원~. 키워드 광고 진행 시 광고비는 별도입니다.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "계약 기간은 어떻게 되나요?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "최소 3개월 이상의 지속적인 관리를 권장드립니다. 첫 3개월간 콘텐츠 기반을 구축하고, 이후 성과를 분석하며 최적화를 진행합니다.",
           },
         },
         {
@@ -96,7 +128,7 @@ const jsonLd = {
           name: "일반 마케팅 에이전시와 뭐가 다른가요?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "수의사가 직접 콘텐츠를 기획하고 제작합니다. 수의학적 배경 없이는 만들 수 없는 깊이 있는 전문성 콘텐츠로 보호자에게 '이 병원은 다르다'는 인식을 만들어냅니다.",
+            text: "수의사가 직접 콘텐츠를 기획하고 제작합니다. 일반 에이전시는 수의학을 모르기 때문에 감정에만 호소하거나 피상적인 내용으로 일관합니다. 새로운마케팅은 원장님의 임상 경험과 전문성을 정확히 이해하고, 그것을 보호자의 언어로 번역합니다.",
           },
         },
         {
@@ -104,7 +136,7 @@ const jsonLd = {
           name: "성과는 언제부터 나타나나요?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "플레이스 노출 개선 등 즉각적인 변화는 1개월 내에 체감 가능합니다. 브랜딩 효과는 3개월 이후부터 본격적으로 나타나며, 실제 사례에서 3개월 만에 매출 50% 성장을 달성했습니다.",
+            text: "플레이스 노출 개선 등 즉각적인 변화는 1개월 내에 체감 가능합니다. 진짜 브랜딩 효과는 3개월 이후부터 본격적으로 나타나며, 실제 사례에서 3개월 만에 매출 50% 성장을 달성했습니다.",
           },
         },
       ],
@@ -120,28 +152,28 @@ export default function RootLayout({
   return (
     <html lang="ko" className={pretendard.variable}>
       <head>
-        {/* Google Analytics 4 */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-BXZJX18Q1M"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-BXZJX18Q1M');
-            `,
-          }}
-        />
         {/* JSON-LD 구조화 데이터 */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-[var(--font-pretendard)] antialiased">{children}</body>
+      <body className="font-[var(--font-pretendard)] antialiased">
+        {children}
+        {/* Google Analytics 4 — afterInteractive로 렌더링 차단 방지 */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BXZJX18Q1M"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BXZJX18Q1M');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }

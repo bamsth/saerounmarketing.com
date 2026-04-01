@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="bg-slate-950 border-t border-slate-800 py-10">
@@ -16,6 +18,21 @@ export default function Footer() {
             <p className="text-slate-600 text-xs mt-1">
               © 2025 – 2026 새로운마케팅. All Rights Reserved.
             </p>
+            <div className="flex items-center justify-center md:justify-end gap-4 mt-2">
+              <Link
+                href="/about"
+                className="text-slate-600 hover:text-slate-400 text-xs transition-colors"
+              >
+                대표 소개
+              </Link>
+              <span className="text-slate-700 text-xs">·</span>
+              <Link
+                href="/privacy"
+                className="text-slate-600 hover:text-slate-400 text-xs transition-colors"
+              >
+                개인정보처리방침
+              </Link>
+            </div>
           </div>
         </div>
       </div>
