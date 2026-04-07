@@ -1,17 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      // www → non-www 리다이렉트 (중복 페이지 문제 해결)
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.saerounmarketing.com" }],
-        destination: "https://saerounmarketing.com/:path*",
-        permanent: true,
-      },
-    ];
+  output: "export",
+  images: {
+    unoptimized: true, // 정적 export 시 필요
   },
+  // www → non-www 리다이렉트는 Cloudflare에서 처리
 };
 
 export default nextConfig;
