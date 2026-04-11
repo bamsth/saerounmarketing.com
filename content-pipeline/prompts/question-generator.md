@@ -60,9 +60,9 @@ Playwright 실패 시 각 단계 스킵하고 계속 진행
 생성된 질문 개수와 제목을 간단히 출력하고 종료.
 
 ## 에러 처리
-- Notion API 실패 → 로컬 파일 `/Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/backup/YYYY-MM-DD-questions.md`에 저장
+- Notion API 실패 → 로컬 파일 `/Users/gimbeomsu/projects/saerounmarketing/content-pipeline/backup/YYYY-MM-DD-questions.md`에 저장
 - Playwright 실패 → Step 2 스킵하고 Step 3은 일반 질문으로 대체
-- 모든 에러는 `/Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/logs/errors.log`에 기록
+- 모든 에러는 `/Users/gimbeomsu/projects/saerounmarketing/content-pipeline/logs/errors.log`에 기록
 
 ## 성과 기반 방향 조정 (매월 1회 실행)
 
@@ -72,4 +72,4 @@ Playwright 실패 시 각 단계 스킵하고 계속 진행
 3. 성과 낮은 글 패턴 확인
 4. content-generator.md의 평가 기준에 반영 제안 출력
    예: "마케터 일지 스타일이 SEO 글 대비 8배 조회수 → 비율 높여야"
-5. 이 분석 결과를 `/Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/logs/monthly-review-YYYY-MM.md`에 저장
+5. 이 분석 결과를 `/Users/gimbeomsu/projects/saerounmarketing/content-pipeline/logs/monthly-review-YYYY-MM.md`에 저장

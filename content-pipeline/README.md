@@ -19,8 +19,8 @@
 
 ```bash
 # 질문 생성 (월/목 오전 9시)
-/schedule "$(cat /Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/prompts/question-generator.md)" --cron "0 9 * * 1,4"
+/schedule "$(cat /Users/gimbeomsu/projects/saerounmarketing/content-pipeline/prompts/question-generator.md)" --cron "0 9 * * 1,4"
 
 # 콘텐츠 생성 (매일 오전 10시)
-/schedule "$(cat /Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/prompts/content-generator.md)" --cron "0 10 * * *"
+/schedule "$(cat /Users/gimbeomsu/projects/saerounmarketing/content-pipeline/prompts/content-generator.md)" --cron "0 10 * * *"
 ```

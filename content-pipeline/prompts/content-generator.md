@@ -6,13 +6,13 @@
 
 ## 성과 데이터 활용
 콘텐츠 생성 전 아래를 확인해서 방향에 반영:
-- `/Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/logs/` 폴더에 monthly-review 파일 있으면 읽기
+- `/Users/gimbeomsu/projects/saerounmarketing/content-pipeline/logs/` 폴더에 monthly-review 파일 있으면 읽기
 - 잘 되는 글 패턴 → 비슷한 구조로
 - 안 되는 글 패턴 → 피하기
 
 ## 스타일 가이드 (필수 준수)
 
-글 쓰기 전에 `/Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/style-guide.md`를 읽어라.
+글 쓰기 전에 `/Users/gimbeomsu/projects/saerounmarketing/content-pipeline/style-guide.md`를 읽어라.
 
 **핵심만 요약:**
 - 구어체 반말, 1인칭 중심 ("나는", "내가")
@@ -86,6 +86,6 @@ FAIL 이유를 1-2줄로 명시하고, 그 문제를 해결해서 다시 써라.
 - 상태: `평가통과` (또는 `수동확인필요`)
 
 **에러 처리:**
-- Notion API 실패 → `/Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/backup/YYYY-MM-DD-content.md`에 저장
+- Notion API 실패 → `/Users/gimbeomsu/projects/saerounmarketing/content-pipeline/backup/YYYY-MM-DD-content.md`에 저장
 - 3회 연속 평가 FAIL → 상태 `수동확인필요`로 전환
-- 모든 에러 → `/Users/gimbeomsu/Desktop/saerounmarketing.com/content-pipeline/logs/errors.log` 기록
+- 모든 에러 → `/Users/gimbeomsu/projects/saerounmarketing/content-pipeline/logs/errors.log` 기록
